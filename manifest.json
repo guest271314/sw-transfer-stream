@@ -1,0 +1,36 @@
+{
+  "name": "sw-transfer-stream",
+  "version": "1.0",
+  "description": "MV3 ServiceWorker => ReadableStream => Web page",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "scripting"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "*.html",
+        "*.js",
+        "*.txt"
+      ],
+      "matches": [
+        "<all_urls>"
+      ],
+      "extensions": []
+    }
+  ],
+  "action": {
+    "default_title": "MV3 ServiceWorker => ReadableStream => Web page"
+  },
+  "author": "guest271314",
+  "homepage_url": "https://github.com/guest271314/sw-transfer-stream"
+}
